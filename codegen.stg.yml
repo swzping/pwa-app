@@ -1,0 +1,10 @@
+schema:
+  - 'https://mcstaging2.guardianindonesia.co.id/graphql'
+config: {}
+generates:
+  ./_src/override/services/introspection-result.js:
+    plugins:
+      - 'fragment-matcher'
+    config:
+      apolloClientVersion: 3
+require: []

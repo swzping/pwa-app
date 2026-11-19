@@ -1,0 +1,145 @@
+{
+  "project_info": {
+    "project_number": "892404998062",
+    "project_id": "guardian-indonesia",
+    "storage_bucket": "guardian-indonesia.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:892404998062:android:793e606d5f112a665fb23f",
+        "android_client_info": {
+          "package_name": "id.app.guardian"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "892404998062-2e0sc1oq2qm64vcokb6qmukrshr3aana.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "id.app.guardian",
+            "certificate_hash": "e4e35bc05b9bef36dafbebc70232199f60b5db3d"
+          }
+        },
+        {
+          "client_id": "892404998062-91bjmfqtkin3cs13igo5qbljmtm2vgsd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDckM2ovdc7wnSuyuYgZlTbpp62F0b9pe0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "892404998062-91bjmfqtkin3cs13igo5qbljmtm2vgsd.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "892404998062-imrjl8c361rqrhnlafgc1jdh38mgmrd6.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "id.app.guardian",
+                "app_store_id": "1623324002"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:892404998062:android:793e606d5f112a665fb23f",
+        "android_client_info": {
+          "package_name": "id.app.guardian.stg"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "892404998062-2e0sc1oq2qm64vcokb6qmukrshr3aana.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "id.app.guardian",
+            "certificate_hash": "e4e35bc05b9bef36dafbebc70232199f60b5db3d"
+          }
+        },
+        {
+          "client_id": "892404998062-91bjmfqtkin3cs13igo5qbljmtm2vgsd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDckM2ovdc7wnSuyuYgZlTbpp62F0b9pe0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "892404998062-91bjmfqtkin3cs13igo5qbljmtm2vgsd.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "892404998062-imrjl8c361rqrhnlafgc1jdh38mgmrd6.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "id.app.guardian",
+                "app_store_id": "1623324002"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:892404998062:android:793e606d5f112a665fb23f",
+        "android_client_info": {
+          "package_name": "id.app.guardian.dev"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "892404998062-2e0sc1oq2qm64vcokb6qmukrshr3aana.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "id.app.guardian",
+            "certificate_hash": "e4e35bc05b9bef36dafbebc70232199f60b5db3d"
+          }
+        },
+        {
+          "client_id": "892404998062-91bjmfqtkin3cs13igo5qbljmtm2vgsd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDckM2ovdc7wnSuyuYgZlTbpp62F0b9pe0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "892404998062-91bjmfqtkin3cs13igo5qbljmtm2vgsd.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "892404998062-imrjl8c361rqrhnlafgc1jdh38mgmrd6.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "id.app.guardian",
+                "app_store_id": "1623324002"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

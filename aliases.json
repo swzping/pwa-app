@@ -1,0 +1,12 @@
+{
+    "@root": "./",
+    "@root/*": "./*",
+    "@app": [
+        "./_src/override",
+        "./_src/core"
+    ],
+    "@app/*": [
+        "./_src/override/*",
+        "./_src/core/*"
+    ]
+}

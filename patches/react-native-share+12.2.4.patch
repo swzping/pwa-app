@@ -1,0 +1,44 @@
+diff --git a/node_modules/react-native-share/RNShare.podspec b/node_modules/react-native-share/RNShare.podspec
+--- a/node_modules/react-native-share/RNShare.podspec
++++ b/node_modules/react-native-share/RNShare.podspec
+@@ -12,6 +12,7 @@ Pod::Spec.new do |s|
+   s.source       = { :git => "https://github.com/react-native-community/react-native-share.git", :tag => "v#{s.version}" }
+ 
+   s.source_files  = "ios/**/*.{h,m,mm}"
++  s.exclude_files = "ios/GenericShare.{h,m}"
+ 
+   s.ios.weak_framework = 'LinkPresentation'
+ 
+diff --git a/node_modules/react-native-share/ios/RNShare.mm b/node_modules/react-native-share/ios/RNShare.mm
+--- a/node_modules/react-native-share/ios/RNShare.mm
++++ b/node_modules/react-native-share/ios/RNShare.mm
+@@ -9,8 +9,7 @@
+ // import RCTBridge
+ #import <React/RCTBridge.h>
+ // import RCTBridge
+ #import <React/RCTUIManager.h>
+-#import "GenericShare.h"
+ #import "WhatsAppShare.h"
+ #import "InstagramShare.h"
+ #import "InstagramStories.h"
+@@ -118,8 +117,6 @@ RCT_EXPORT_METHOD(shareSingle:(NSDictionary *)options
+         NSLog(@"%@", social);
+         if([social isEqualToString:@"facebook"]) {
+-            NSLog(@"TRY OPEN FACEBOOK");
+-            GenericShare *shareCtl = [[GenericShare alloc] init];
+-            [shareCtl shareSingle:options reject: reject resolve: resolve serviceType: SLServiceTypeFacebook inAppBaseUrl:@"fb://"];
++            reject(@"com.rnshare", @"Facebook shareSingle is not supported on iOS; use Share.open instead", nil);
+         } else if([social isEqualToString:@"facebookstories"]) {
+             NSString *appId = [RCTConvert NSString:options[@"appId"]];
+             if (appId) {
+@@ -130,10 +127,6 @@ RCT_EXPORT_METHOD(shareSingle:(NSDictionary *)options
+                 RCTLogError(@"key 'appId' missing in options");
+                 return;
+             }
+-        } else if([social isEqualToString:@"twitter"]) {
+-            NSLog(@"TRY OPEN Twitter");
+-            GenericShare *shareCtl = [[GenericShare alloc] init];
+-            [shareCtl shareSingle:options reject: reject resolve: resolve serviceType: SLServiceTypeTwitter inAppBaseUrl:@"twitter://"];
+         } else if([social isEqualToString:@"googleplus"]) {
+             NSLog(@"TRY OPEN google plus");
+             GooglePlusShare *shareCtl = [[GooglePlusShare alloc] init];

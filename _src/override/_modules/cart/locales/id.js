@@ -1,0 +1,31 @@
+export default {
+  shoppingCart: 'Keranjang Belanja',
+  editShoppingBag: 'Edit Keranjang Belanja',
+  itemsInCart: 'Barang di Keranjang',
+  noItemInCart: 'Tidak ada barang di Keranjang',
+  successSaveAddress: 'Berhasil menyimpan alamat',
+  setPasswordGuestCheckout:
+    'Tetapkan kata sandi di akhir pembayaran tamu untuk membuat akun dalam satu langkah mudah',
+  removeItem: 'Hapus item',
+  removeConfirmation: 'Apa anda yakin ingin menghapus item ini dari keranjang?',
+  remove: 'Hapus',
+  cancel: 'Batal',
+  oos: 'Stok tidak tersedia',
+  lessStock: 'Stok tersisa',
+  updating: 'Memperbarui',
+  productIsUpdating:
+    'Produk sedang diperbaharui. Mohon isi keranjang belanja Anda',
+  oosWarning:
+    'Silahkan hapus produk yang tidak tersedia sebelum melanjutkan ke proses checkout',
+  discountLabel: 'Hemat',
+  totalDiscount: 'Total Diskon',
+  subtotal: 'Subtotal',
+  orderTotal: 'Total Pesanan',
+  checkout: 'Buat Pesanan',
+  moreToGetFreeDelivery: ' more to get free delivery',
+  freeDeliveryTip: 'Great! Enjoy free delivery',
+  redeemPoints: 'Redeem {{point}} Points',
+  giftSelectionTips: 'You can choose up to {{maxSelect}} items',
+  freeItemConfirmBefore: '{{selectedNum}} of {{maxSelect}} selected',
+  changeOtherVariant: 'Change other variant',
+};

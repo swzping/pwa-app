@@ -1,0 +1,13 @@
+diff --git a/node_modules/react-native-snap-carousel/src/carousel/Carousel.js b/node_modules/react-native-snap-carousel/src/carousel/Carousel.js
+index dae71a3..f85c4fc 100644
+--- a/node_modules/react-native-snap-carousel/src/carousel/Carousel.js
++++ b/node_modules/react-native-snap-carousel/src/carousel/Carousel.js
+@@ -818,7 +818,7 @@ export default class Carousel extends Component {
+         }
+ 
+         if (nextActiveItem === this._itemToSnapTo &&
+-            scrollOffset === this._scrollOffsetRef) {
++            Math.abs(scrollOffset - this._scrollOffsetRef) < 0.5) {
+             this._repositionScroll(nextActiveItem);
+         }
+ 

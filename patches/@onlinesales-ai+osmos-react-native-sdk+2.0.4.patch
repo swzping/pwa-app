@@ -1,0 +1,260 @@
+diff --git a/node_modules/@onlinesales-ai/osmos-react-native-sdk/lib/index.cjs.js b/node_modules/@onlinesales-ai/osmos-react-native-sdk/lib/index.cjs.js
+index e247972..2d77092 100644
+--- a/node_modules/@onlinesales-ai/osmos-react-native-sdk/lib/index.cjs.js
++++ b/node_modules/@onlinesales-ai/osmos-react-native-sdk/lib/index.cjs.js
+@@ -530,6 +530,11 @@ const viewProduct = (data) => [
+         type: "string|number",
+         apiKey: "store_id",
+     },
++    {
++        key: "customParam1",
++        type: "string|number",
++        apiKey: "f.custom_label_1",
++    },
+     {
+         // Version of the app the shopper is using.
+         key: "osVersion",
+@@ -622,6 +627,11 @@ const addToCart = (data) => [
+         type: "string|number",
+         apiKey: "store_id",
+     },
++    {
++        key: "customParam1",
++        type: "string|number",
++        apiKey: "f.custom_label_1",
++    },
+     {
+         // Version of the app the shopper is using.
+         key: "osVersion",
+@@ -733,6 +743,11 @@ const saleComplete = (data) => [
+         type: "string|number",
+         apiKey: "store_id",
+     },
++    {
++        key: "customParam1",
++        type: "string|number",
++        apiKey: "f.custom_label_1",
++    },
+ ];
+ /**
+  * Validation rules for individual products in sale completion events.
+@@ -831,6 +846,11 @@ const adClick = (data) => [
+         type: "string|number",
+         apiKey: "device_id",
+     },
++    {
++        key: "customParam1",
++        type: "string|number",
++        apiKey: "f.custom_label_1",
++    },
+ ];
+ /**
+  * Validation rules for ad impression events.
+@@ -893,6 +913,11 @@ const adImpression = (data) => [
+         defaultValue: OS_NAME,
+         apiKey: "os_name",
+     },
++    {
++        key: "customParam1",
++        type: "string|number",
++        apiKey: "f.custom_label_1",
++    },
+ ];
+ /**
+  * Validation rules for video action events (play, pause, mute, etc.).
+@@ -949,6 +974,11 @@ const videoAction = (data) => [
+         type: "number",
+         apiKey: "event_time",
+     },
++    {
++        key: "customParam1",
++        type: "string|number",
++        apiKey: "f.custom_label_1",
++    },
+ ];
+ /**
+  * Validation rules for video progress events.
+@@ -1005,6 +1035,11 @@ const videoProgress = (data) => [
+         type: "number",
+         apiKey: "event_time",
+     },
++    {
++        key: "customParam1",
++        type: "string|number",
++        apiKey: "f.custom_label_1",
++    },
+ ];
+ /**
+  * Exported validation parameter functions for all tracker events.
+@@ -1027,6 +1062,9 @@ const TRACKER_VALIDATION_PARAMS = {
+  * @returns Object with undefined values removed
+  */
+ function removeUndefined(obj) {
++    const customLabelAliases = {
++        customLabel1: "customParam1",
++    };
+     const result = {};
+     // Handle string and symbol keys
+     const stringKeys = Object.keys(obj);
+@@ -1035,7 +1073,12 @@ function removeUndefined(obj) {
+     for (const key of allKeys) {
+         const value = obj[key];
+         if (value !== undefined) {
+-            result[key] = value;
++            const normalizedKey = typeof key === "string" && customLabelAliases[key]
++                ? customLabelAliases[key]
++                : key;
++            if (result[normalizedKey] === undefined) {
++                result[normalizedKey] = value;
++            }
+         }
+     }
+     return result;
+@@ -1173,7 +1216,7 @@ const displayAdsWithAu = (data) => [
+     {
+         key: "customParam1",
+         type: "string|number",
+-        apiKey: "f.custom_param_1",
++        apiKey: "f.custom_label_1",
+     },
+     {
+         key: "customParam2",
+@@ -1306,7 +1349,7 @@ const displayAdsWithPageType = (data) => [
+     {
+         key: "customParam1",
+         type: "string|number",
+-        apiKey: "f.custom_param_1",
++        apiKey: "f.custom_label_1",
+     },
+     {
+         key: "customParam2",
+diff --git a/node_modules/@onlinesales-ai/osmos-react-native-sdk/lib/index.esm.js b/node_modules/@onlinesales-ai/osmos-react-native-sdk/lib/index.esm.js
+index cc622b7..0949f39 100644
+--- a/node_modules/@onlinesales-ai/osmos-react-native-sdk/lib/index.esm.js
++++ b/node_modules/@onlinesales-ai/osmos-react-native-sdk/lib/index.esm.js
+@@ -528,6 +528,11 @@ const viewProduct = (data) => [
+         type: "string|number",
+         apiKey: "store_id",
+     },
++    {
++        key: "customParam1",
++        type: "string|number",
++        apiKey: "f.custom_label_1",
++    },
+     {
+         // Version of the app the shopper is using.
+         key: "osVersion",
+@@ -620,6 +625,11 @@ const addToCart = (data) => [
+         type: "string|number",
+         apiKey: "store_id",
+     },
++    {
++        key: "customParam1",
++        type: "string|number",
++        apiKey: "f.custom_label_1",
++    },
+     {
+         // Version of the app the shopper is using.
+         key: "osVersion",
+@@ -731,6 +741,11 @@ const saleComplete = (data) => [
+         type: "string|number",
+         apiKey: "store_id",
+     },
++    {
++        key: "customParam1",
++        type: "string|number",
++        apiKey: "f.custom_label_1",
++    },
+ ];
+ /**
+  * Validation rules for individual products in sale completion events.
+@@ -829,6 +844,11 @@ const adClick = (data) => [
+         type: "string|number",
+         apiKey: "device_id",
+     },
++    {
++        key: "customParam1",
++        type: "string|number",
++        apiKey: "f.custom_label_1",
++    },
+ ];
+ /**
+  * Validation rules for ad impression events.
+@@ -891,6 +911,11 @@ const adImpression = (data) => [
+         defaultValue: OS_NAME,
+         apiKey: "os_name",
+     },
++    {
++        key: "customParam1",
++        type: "string|number",
++        apiKey: "f.custom_label_1",
++    },
+ ];
+ /**
+  * Validation rules for video action events (play, pause, mute, etc.).
+@@ -947,6 +972,11 @@ const videoAction = (data) => [
+         type: "number",
+         apiKey: "event_time",
+     },
++    {
++        key: "customParam1",
++        type: "string|number",
++        apiKey: "f.custom_label_1",
++    },
+ ];
+ /**
+  * Validation rules for video progress events.
+@@ -1003,6 +1033,11 @@ const videoProgress = (data) => [
+         type: "number",
+         apiKey: "event_time",
+     },
++    {
++        key: "customParam1",
++        type: "string|number",
++        apiKey: "f.custom_label_1",
++    },
+ ];
+ /**
+  * Exported validation parameter functions for all tracker events.
+@@ -1025,6 +1060,9 @@ const TRACKER_VALIDATION_PARAMS = {
+  * @returns Object with undefined values removed
+  */
+ function removeUndefined(obj) {
++    const customLabelAliases = {
++        customLabel1: "customParam1",
++    };
+     const result = {};
+     // Handle string and symbol keys
+     const stringKeys = Object.keys(obj);
+@@ -1033,7 +1071,12 @@ function removeUndefined(obj) {
+     for (const key of allKeys) {
+         const value = obj[key];
+         if (value !== undefined) {
+-            result[key] = value;
++            const normalizedKey = typeof key === "string" && customLabelAliases[key]
++                ? customLabelAliases[key]
++                : key;
++            if (result[normalizedKey] === undefined) {
++                result[normalizedKey] = value;
++            }
+         }
+     }
+     return result;
+@@ -1171,7 +1214,7 @@ const displayAdsWithAu = (data) => [
+     {
+         key: "customParam1",
+         type: "string|number",
+-        apiKey: "f.custom_param_1",
++        apiKey: "f.custom_label_1",
+     },
+     {
+         key: "customParam2",
+@@ -1304,7 +1347,7 @@ const displayAdsWithPageType = (data) => [
+     {
+         key: "customParam1",
+         type: "string|number",
+-        apiKey: "f.custom_param_1",
++        apiKey: "f.custom_label_1",
+     },
+     {
+         key: "customParam2",

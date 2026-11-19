@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "559336040593",
+    "project_id": "guardian-indonesia-stagi-8504c",
+    "storage_bucket": "guardian-indonesia-stagi-8504c.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:559336040593:android:b46f0209183279d169b730",
+        "android_client_info": {
+          "package_name": "id.app.guardian"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC0kBnCQNfacN4yStUgL2LIHzJ5MNtUFxs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

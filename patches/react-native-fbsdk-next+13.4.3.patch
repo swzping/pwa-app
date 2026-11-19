@@ -1,0 +1,10 @@
+diff --git a/node_modules/react-native-fbsdk-next/react-native-fbsdk-next.podspec b/node_modules/react-native-fbsdk-next/react-native-fbsdk-next.podspec
+--- a/node_modules/react-native-fbsdk-next/react-native-fbsdk-next.podspec
++++ b/node_modules/react-native-fbsdk-next/react-native-fbsdk-next.podspec
+@@ -14,5 +14,6 @@ Pod::Spec.new do |s|
+   s.dependency      'React-Core'
+   s.cocoapods_version   = '>= 1.12.0'
++  s.default_subspecs = 'Core'
+ 
+   s.subspec 'Core' do |ss|
+     ss.dependency     'FBSDKCoreKit', "~> #{FBSDKVersion}"

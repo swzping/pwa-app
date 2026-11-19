@@ -1,0 +1,10 @@
++ DEST=/Users/fansuo/Library/Developer/Xcode/DerivedData/GuardianID-bsattvhmrqxzmqdbhiyolxosdmon/Build/Products/Debug-iphonesimulator/GuardianID.app
++ [[ Debug = *Debug* ]]
++ [[ ! iphonesimulator == *simulator ]]
++ [[ -n '' ]]
++ case "$CONFIGURATION" in
++ [[ iphonesimulator == *simulator ]]
++ [[ -n '' ]]
++ echo 'Skipping bundling in Debug for the Simulator (since the packager bundles for you). Use the FORCE_BUNDLING flag to change this behavior.'
+Skipping bundling in Debug for the Simulator (since the packager bundles for you). Use the FORCE_BUNDLING flag to change this behavior.
++ exit 0

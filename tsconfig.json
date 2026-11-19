@@ -1,0 +1,36 @@
+{
+  "extends": "@react-native/typescript-config/tsconfig.json",
+  "compilerOptions": {
+    "allowJs": true,
+    "checkJs": false,
+    "baseUrl": ".",
+    "paths": {
+      "@root": [
+        "./"
+      ],
+      "@root/*": [
+        "./*"
+      ],
+      "@app": [
+        "./_src/override",
+        "./_src/core"
+      ],
+      "@app/*": [
+        "./_src/override/*",
+        "./_src/core/*"
+      ]
+    }
+  },
+  "include": [
+    "_src/**/*",
+    "*.js",
+    "*.jsx",
+    "*.ts",
+    "*.tsx"
+  ],
+  "exclude": [
+    "node_modules",
+    "android",
+    "ios"
+  ]
+}

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>892404998062-p0scrmeq5oecbm89cja0opvmk550ci8g.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.892404998062-p0scrmeq5oecbm89cja0opvmk550ci8g</string>
+	<key>API_KEY</key>
+	<string>AIzaSyC64GuJdbchctQlN7DB6cs1v6mT0YsG8ds</string>
+	<key>GCM_SENDER_ID</key>
+	<string>892404998062</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>id.app.guardian</string>
+	<key>PROJECT_ID</key>
+	<string>guardian-indonesia</string>
+	<key>STORAGE_BUCKET</key>
+	<string>guardian-indonesia.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:892404998062:ios:a250109ad7f6e6aa5fb23f</string>
+</dict>
+</plist>
+

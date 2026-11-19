@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Guardian ID</string>
+    <!-- Facebook SDK -->
+    <string name="facebook_app_id">939225875435353</string>
+    <string name="facebook_client_token">4c652bc3efa4fb680766bdc17cc1f8f7</string>
+</resources>
+
